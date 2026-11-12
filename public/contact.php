@@ -1,31 +1,56 @@
 <?php
-header('Content-Type: application/json');
-header('Access-Control-Allow-Origin: *');
-header('Access-Control-Allow-Methods: POST');
-header('Access-Control-Allow-Headers: Content-Type');
+declare(strict_types=1);
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $name = $_POST['name'] ?? '';
-    $email = $_POST['email'] ?? '';
-    $phone = $_POST['phone'] ?? '';
-    $message = $_POST['message'] ?? '';
+header('Content-Type: application/json; charset=UTF-8');
+header('Cache-Control: no-store');
+header('X-Content-Type-Options: nosniff');
 
-    if (empty($name) || empty($email) || empty($message)) {
-        echo json_encode(['success' => false, 'message' => 'Faltan campos obligatorios']);
-        exit;
-    }
-
-    $to = 'global.sales@haciendasolradiante.com'; // Placeholder email
-    $subject = 'Nuevo mensaje de contacto - Hacienda Sol Radiante';
-    $body = "Nombre: $name\nCorreo: $email\nTeléfono: $phone\n\nMensaje:\n$message";
-    $headers = "From: $email";
-
-    if (mail($to, $subject, $body, $headers)) {
-        echo json_encode(['success' => true]);
-    } else {
-        echo json_encode(['success' => false, 'message' => 'Error al enviar el correo']);
-    }
-} else {
-    echo json_encode(['success' => false, 'message' => 'Método no permitido']);
+function respond(int $status, bool $success, string $message): void {
+    http_response_code($status);
+    echo json_encode(['success' => $success, 'message' => $message], JSON_UNESCAPED_UNICODE);
+    exit;
 }
-?>
+
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    header('Allow: POST');
+    respond(405, false, 'Método no permitido.');
+}
+
+$name = $_POST['name'] ?? '';
+$email = $_POST['email'] ?? '';
+$phone = $_POST['phone'] ?? '';
+$message = $_POST['message'] ?? '';
+
+if (!is_string($name) || !is_string($email) || !is_string($phone) || !is_string($message)) {
+    respond(422, false, 'Revisa los datos del formulario.');
+}
+
+$name = trim($name);
+$email = trim($email);
+$phone = trim($phone);
+$message = trim($message);
+
+if ($name === '' || $email === '' || $message === '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    respond(422, false, 'Completa tu nombre, un correo válido y el mensaje.');
+}
+if (strlen($name) > 120 || strlen($email) > 180 || strlen($phone) > 40 || strlen($message) > 4000) {
+    respond(422, false, 'Uno de los campos supera la longitud permitida.');
+}
+
+$name = preg_replace('/[\r\n]+/', ' ', $name);
+$phone = preg_replace('/[\r\n]+/', ' ', $phone);
+$recipient = 'global.sales@haciendasolradiante.mx';
+$subject = 'Nueva consulta de aceites - Hacienda Sol Radiante';
+$body = "Nombre: $name\nCorreo: $email\nTeléfono: $phone\n\nMensaje:\n$message";
+$headers = [
+    'From: Hacienda Sol Radiante <' . $recipient . '>',
+    'Reply-To: ' . $email,
+    'Content-Type: text/plain; charset=UTF-8',
+    'X-Mailer: PHP/' . PHP_VERSION,
+];
+
+if (@mail($recipient, $subject, $body, implode("\r\n", $headers))) {
+    respond(200, true, 'Mensaje enviado.');
+}
+
+respond(503, false, 'No pudimos enviar tu mensaje. Intenta de nuevo o escríbenos por correo.');

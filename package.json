@@ -1,10 +1,11 @@
 {
-  "name": "temp_app",
+  "name": "hacienda-sol-radiante-aceites",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:php": "php -S 127.0.0.1:8000 -t public",
     "build": "vite build",
     "preview": "vite preview"
   },
@@ -12,11 +13,7 @@
     "vue": "^3.5.24"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.1.17",
     "@vitejs/plugin-vue": "^6.0.1",
-    "autoprefixer": "^10.4.22",
-    "postcss": "^8.5.6",
-    "tailwindcss": "^4.1.17",
     "vite": "^7.2.4"
   }
 }

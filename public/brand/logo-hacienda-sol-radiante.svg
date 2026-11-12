@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 100" role="img" aria-labelledby="title desc">
+  <title id="title">Hacienda Sol Radiante</title>
+  <desc id="desc">Nuevo logo con gota vegetal, sol y nombre de la marca</desc>
+  <circle cx="50" cy="50" r="48" fill="#173C2B"/>
+  <circle cx="50" cy="36" r="12" fill="#DDB767"/>
+  <path d="M50 27C40 41 32 51 32 61a18 18 0 0 0 36 0c0-10-8-20-18-34Z" fill="#F6F0DD"/>
+  <path d="M39 68c9-11 17-16 23-16M50 76V60" fill="none" stroke="#173C2B" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M22 31l-5-4m13-7-3-6m46 6 3-6m8 17 5-4" fill="none" stroke="#DDB767" stroke-width="2" stroke-linecap="round"/>
+  <text x="117" y="37" fill="#173C2B" font-family="Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="7">HACIENDA</text>
+  <text x="115" y="73" fill="#173C2B" font-family="Georgia, serif" font-size="37" font-weight="600" letter-spacing="-1.8">SOL RADIANTE</text>
+</svg>

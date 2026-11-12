@@ -1,5 +1,29 @@
-# Vue 3 + Vite
+# Hacienda Sol Radiante — Aceites Vegetales
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Landing page de Hacienda Sol Radiante para presentar una propuesta de suministro y exportación de aceites vegetales a clientes industriales. Construida con Vue 3 y Vite.
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+## Desarrollo local
+
+```bash
+npm ci
+npm run dev
+```
+
+Para probar el formulario en desarrollo, abre otra terminal y ejecuta `npm run dev:php`. Vite envía `/contact.php` a ese servidor PHP local.
+
+## Producción
+
+```bash
+npm run build
+npm run preview
+```
+
+La compilación queda en `dist/`, incluido `contact.php`. El formulario requiere un alojamiento con PHP y correo saliente configurado; el servidor estático de Vite o `npm run preview` no ejecuta PHP. Publica el contenido de `dist/` en un alojamiento compatible y prueba un envío real allí.
+
+## Identidad y recursos
+
+- Logo vectorial: `public/brand/logo-hacienda-sol-radiante.svg`
+- Isotipo y favicon: `public/brand/mark.svg`
+- Fotografías originales generadas para este proyecto: `public/images/`
+
+El correo del formulario es `global.sales@haciendasolradiante.mx`, proporcionado para este rediseño. El teléfono comercial proviene de la versión anterior del sitio. Confirma productos, presentaciones y el teléfono antes de publicar.
