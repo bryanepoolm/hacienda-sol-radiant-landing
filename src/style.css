@@ -20,3 +20,57 @@
 @media(max-width:800px){.contact-grid{gap:38px}.contact-intro>p:not(.eyebrow){margin-top:22px}.contact-form{padding:32px}}
 @media(max-width:520px){.contact-form{padding:24px}.contact-form h3{font-size:29px}.form-row{grid-template-columns:1fr;gap:0}.contact-email{font-size:12px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}}
+
+/* Catálogo y logotipo oficial */
+.header-inner{height:105px}
+.brand img{width:160px;height:auto;aspect-ratio:3/2;object-fit:contain;background:#fff}
+.about-logo{width:min(100%,410px);margin-top:44px;padding:12px;background:#fff;box-shadow:0 20px 55px #213a2612}
+.about-logo img{width:100%;height:auto}
+.catalog-subheading{display:flex;align-items:baseline;gap:22px;margin:0 0 27px;padding-bottom:17px;border-bottom:1px solid #c8d2c5}
+.catalog-number{color:#aa812e;font:700 11px/1 'Manrope',sans-serif;letter-spacing:.15em}
+.catalog-subheading h3{margin:0;color:var(--green-deep);font:500 clamp(26px,3vw,39px)/1.2 'Playfair Display',Georgia,serif}
+.catalog-subheading p{margin:0 0 0 auto;color:#657268;font-size:13px}
+.product-body h4{margin:0 0 12px;color:var(--green-deep);font:500 31px/1.15 'Playfair Display',Georgia,serif;letter-spacing:-.03em}
+.product-body>p:not(.product-detail){min-height:0}
+.product-list{display:flex;flex-direction:column;gap:0;min-height:150px;margin:20px 0 0;padding:0;list-style:none;border-top:1px solid #d8dbd0}
+.product-list li{padding:8px 0;border-bottom:1px solid #e5e8de;color:#35533c;font:600 12px/1.45 'Manrope',sans-serif}
+.fats-heading{margin-top:78px}
+.fat-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:17px}
+.fat-card{display:flex;flex-direction:column;min-height:235px;padding:27px;background:#faf9f3;border-top:3px solid #d2a531;transition:transform .2s,box-shadow .2s}
+.fat-card{grid-column:span 2}
+.fat-card:nth-last-child(-n+2){grid-column:span 3}
+.fat-card:hover{transform:translateY(-4px);box-shadow:0 15px 30px #1b2d1b14}
+.fat-card>span{color:#ae8a3e;font:700 11px/1 'Manrope',sans-serif;letter-spacing:.15em}
+.fat-card h4{margin:18px 0 9px;color:var(--green-deep);font:500 24px/1.2 'Playfair Display',Georgia,serif}
+.fat-card p{margin:0;color:#667169;font-size:13px;line-height:1.6}
+.fat-card a{display:flex;justify-content:space-between;margin-top:auto;padding-top:20px;color:#2e4e37;font:700 10px/1 'Manrope',sans-serif;letter-spacing:.1em;text-transform:uppercase}
+.fat-card a span{font-size:17px;font-weight:400}
+.brand-footer img{width:225px;height:auto}
+.footer-brand p{margin-top:19px}
+@media(max-width:800px){.header-inner{height:92px}.brand img{width:132px}.fat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.fat-card,.fat-card:nth-last-child(-n+2){grid-column:span 1}.product-list{min-height:0}.catalog-subheading{flex-wrap:wrap;gap:10px 16px}.catalog-subheading p{width:100%;margin-left:0}}
+@media(max-width:520px){.header-inner{height:84px}.brand img{width:115px}.about-logo{margin-top:32px}.fat-grid{grid-template-columns:1fr}.fat-card{min-height:195px}.catalog-subheading h3{font-size:28px}.brand-footer img{width:190px}}
+
+/* Integra el archivo original con el fondo y usa un encuadre horizontal en la navegación. */
+.header-inner{height:82px}
+.brand-header{width:200px;height:58px;overflow:hidden}
+.brand-header img{width:100%;height:100%;aspect-ratio:auto;object-fit:cover;object-position:center 52%;background:transparent;filter:brightness(1.12) contrast(1.08);mix-blend-mode:multiply}
+.about-grid{z-index:auto}
+.about-logo{width:min(100%,480px);margin-top:38px;padding:0;background:var(--cream);box-shadow:none}
+.about-logo img{filter:brightness(1.12) contrast(1.08);mix-blend-mode:multiply}
+.footer-wordmark{display:flex;flex-direction:column;align-items:flex-start;width:max-content;color:#f2e8d1;font-family:'Playfair Display',Georgia,serif;line-height:1}
+.footer-wordmark span{font-size:21px}
+.footer-wordmark strong{font-size:37px;font-weight:500;letter-spacing:-.045em}
+.footer-brand p{margin-top:22px}
+@media(max-width:800px){.header-inner{height:76px}.brand-header{width:170px;height:51px}}
+@media(max-width:520px){.header-inner{height:70px}.brand-header{width:145px;height:44px}.footer-wordmark strong{font-size:32px}}
+
+/* Fotografías originales para las aplicaciones de grasas vegetales. */
+.fat-card{min-height:0;padding:0;overflow:hidden}
+.fat-image-wrap{position:relative;aspect-ratio:1.6;overflow:hidden;background:#eee9db}
+.fat-image-wrap img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.fat-card:hover .fat-image-wrap img{transform:scale(1.04)}
+.fat-image-wrap>span{position:absolute;top:16px;left:16px;padding:8px 10px;background:#f8f5eceb;color:#35533c;font:700 10px/1 'Manrope',sans-serif;letter-spacing:.14em}
+.fat-body{display:flex;flex:1;flex-direction:column;min-height:190px;padding:24px 27px 28px}
+.fat-body h4{margin:0 0 9px}
+.fat-body a{padding-top:22px}
+@media(max-width:520px){.fat-image-wrap{aspect-ratio:1.4}.fat-body{min-height:165px}}

@@ -40,7 +40,7 @@ if (strlen($name) > 120 || strlen($email) > 180 || strlen($phone) > 40 || strlen
 $name = preg_replace('/[\r\n]+/', ' ', $name);
 $phone = preg_replace('/[\r\n]+/', ' ', $phone);
 $recipient = 'global.sales@haciendasolradiante.mx';
-$subject = 'Nueva consulta de aceites - Hacienda Sol Radiante';
+$subject = 'Nueva consulta de aceites y grasas - Hacienda Sol Radiante';
 $body = "Nombre: $name\nCorreo: $email\nTeléfono: $phone\n\nMensaje:\n$message";
 $headers = [
     'From: Hacienda Sol Radiante <' . $recipient . '>',

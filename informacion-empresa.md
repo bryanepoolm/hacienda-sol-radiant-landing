@@ -1,4 +1,4 @@
-# Hacienda Sol Radiante — propuesta de aceites vegetales
+# Hacienda Sol Radiante — aceites y grasas vegetales
 
 ## Enfoque
 
@@ -6,15 +6,22 @@ Hacienda Sol Radiante presenta el suministro y exportación de aceites y grasas 
 
 ## Portafolio presentado
 
-- Aceite de palma: RBD, oleína y fracciones.
-- Aceite de coco: crudo y refinado.
-- Aceites de semillas: soya, canola y maíz.
+- Aceites de palma y palmiste: palma RBD, palmiste RBD, oleína de palma RBD y estearina de palma RBD.
+- Aceites de coco: CB y RBD.
+- Aceites de semillas: canola RBD, maíz RBD y soya RBD.
+- Grasas vegetales para panificación, panificación y freído, quesos, donas/churros/buñuelos y bases de helado.
 
-Estas líneas y sus especificaciones son contenido propuesto para el rediseño; requieren confirmación comercial antes de su publicación.
+Las categorías se alinean con el catálogo de referencia entregado por el cliente. Ese PDF pertenece a Oleofinos: sus marcas comerciales, certificaciones, fichas técnicas y datos de contacto no se atribuyen a Hacienda Sol Radiante. La disponibilidad y las especificaciones deben confirmarse comercialmente para cada cotización.
 
 ## Aplicaciones presentadas
 
-Alimentos, food service, cuidado personal e industria.
+Freído, panificación, formulaciones de quesos y helados, y food service.
+
+## Identidad visual
+
+La landing utiliza el logo oficial proporcionado por el cliente en `public/brand/logo-oficial.jpeg`.
+
+Las fotografías del sitio en `public/images/` se generaron para Hacienda Sol Radiante con una dirección visual inspirada en el catálogo de referencia: producto sobre fondo claro, acentos verde y dorado, y aplicaciones alimentarias. Son imágenes ilustrativas; no representan fichas técnicas ni empaques comerciales confirmados.
 
 ## Contacto
 
