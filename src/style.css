@@ -35,6 +35,11 @@
 .product-list{display:flex;flex-direction:column;gap:0;min-height:150px;margin:20px 0 0;padding:0;list-style:none;border-top:1px solid #d8dbd0}
 .product-list li{padding:8px 0;border-bottom:1px solid #e5e8de;color:#35533c;font:600 12px/1.45 'Manrope',sans-serif}
 .fats-heading{margin-top:78px}
+.coconut-heading{margin-top:78px}
+.coconut-grid .product-card{display:flex;flex-direction:column}
+.coconut-grid .product-body{display:flex;flex:1;flex-direction:column}
+.coconut-grid .product-list{min-height:0;margin-bottom:24px}
+.coconut-grid .product-body a{margin-top:auto}
 .fat-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:17px}
 .fat-card{display:flex;flex-direction:column;min-height:235px;padding:27px;background:#faf9f3;border-top:3px solid #d2a531;transition:transform .2s,box-shadow .2s}
 .fat-card{grid-column:span 2}
